@@ -1,5 +1,5 @@
 import json
-from sql_factory import SqlFactory
+from sandbox.sql_builder.sql_factory import SqlFactory
 import debugpy
 
 # Start the debugger listener on 0.0.0.0:5678
@@ -16,7 +16,10 @@ raw = '''
     "params": {"p1": "this", "p2": "that"}},
   { "name": "food", \
     "type": "barb", \
-    "params": {"pp1": "Mike", "pp2": "Dave", "pp3": [1,5,30]}}
+    "params": {"pp1": "Mike", "pp2": "Dave", "pp3": [1,5,30]}},
+  { "name": "test", \
+    "type": "test", \
+    "params": {"param1": "THIS IS COOL", "param2": 322, "param3": [1,5,30]}}
 ]
 '''
 

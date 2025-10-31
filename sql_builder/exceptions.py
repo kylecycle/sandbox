@@ -1,2 +1,0 @@
-class UnknownProcessorType(Exception):
-    pass

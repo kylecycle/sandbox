@@ -2,7 +2,7 @@ from ..base_processor import BaseProcessor
 from ..registry import register_processor
 
 
-@register_processor("bar")
-class BarProcessor(BaseProcessor):
+@register_processor("test")
+class TestProcessor(BaseProcessor):
     def process(self, name: str, params: dict):
-        print(f"[BAR] {name} -> {params}")
+        print(f"[TEST] {name} -> {params}")
