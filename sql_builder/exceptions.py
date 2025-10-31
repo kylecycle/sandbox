@@ -1,0 +1,2 @@
+class UnknownProcessorType(Exception):
+    pass
