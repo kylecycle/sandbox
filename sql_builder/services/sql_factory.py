@@ -1,6 +1,6 @@
 import pkgutil
 import importlib
-from .registry import get_processor_class
+from sql_builder.services.registry import get_processor_class
 
 
 class SqlFactory:
@@ -12,7 +12,7 @@ class SqlFactory:
         if cls._loaded:
             return
         # valid relative import form inside a package
-        from . import processors as pkg
+        import sql_builder.processors as pkg
         for _, module_name, _ in pkgutil.iter_modules(pkg.__path__):
             importlib.import_module(f"{pkg.__name__}.{module_name}")
         cls._loaded = True

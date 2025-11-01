@@ -1,10 +1,10 @@
 import json
-from sandbox.sql_builder.sql_factory import SqlFactory
-import debugpy
+from sql_builder.services.sql_factory import SqlFactory
+#import debugpy
 
 # Start the debugger listener on 0.0.0.0:5678
-debugpy.listen(("0.0.0.0", 5678))
-print(" Debugger is listening on port 5678...")
+#debugpy.listen(("0.0.0.0", 5678))
+#print(" Debugger is listening on port 5678...")
 
 # Uncomment this to pause until debugger is attached
 # debugpy.wait_for_client()
@@ -28,6 +28,3 @@ items = json.loads(raw)
 for item in items:
     processor = SqlFactory.get_processor(item["type"])
     processor.process(item["name"], item["params"])
-
-# if __name__ == "__main__":
-#     main()

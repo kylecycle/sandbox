@@ -1,5 +1,5 @@
-from ..base_processor import BaseProcessor
-from ..registry import register_processor
+from sql_builder.processors.base_processor import BaseProcessor
+from sql_builder.services.registry import register_processor
 
 
 @register_processor("barb")
